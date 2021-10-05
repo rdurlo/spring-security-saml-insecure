@@ -335,7 +335,10 @@
 					other JAXP implementations, consult the documentation for the implementation for guidance on how to achieve a
 					similar configuration.
 	-->
+	
 	<bean id="parserPool" class="org.opensaml.xml.parse.StaticBasicParserPool" init-method="initialize"/>
+		<property name="ignoreComments" value="false"/>
+	</bean>
 
 	<bean id="parserPoolHolder" class="org.springframework.security.saml.parser.ParserPoolHolder"/>
 
