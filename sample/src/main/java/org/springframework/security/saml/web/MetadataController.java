@@ -400,5 +400,11 @@ public class MetadataController {
     public String getTabName() {
         return "metadata";
     }
+	
+	public ParserPool parserPool() {
+		StaticBasicParserPool staticBasicParserPool = new StaticBasicParserPool();
+		staticBasicParserPool.setIgnoreComments(false);
+		return staticBasicParserPool;
+	}
 
 }
