@@ -294,5 +294,16 @@ configure(rootProject) {
 				"set GRADLE_OPTS=$gradleBatOpts %GRADLE_OPTS%\nset DEFAULT_JVM_OPTS=")
 		}
 	}
+	
+	plugins {
+  		id "org.sonarqube" version "3.3"
+	}
 
+	sonarqube {
+  		properties {
+    			property "sonar.projectKey", "rdurlo_spring-security-saml-insecure"
+    			property "sonar.organization", "rdurlo"
+    			property "sonar.host.url", "https://sonarcloud.io"
+  		}
+	}
 }
