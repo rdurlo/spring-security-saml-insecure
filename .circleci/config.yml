@@ -6,7 +6,7 @@ jobs:
       image: ubuntu-2004:2022.10.1
     steps:
       - checkout
-      - run: https://rdurlo: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@github.com/rdurlo/CxCLIScript.git
+      - run: git clone https://rdurlo:$GIT_TOKEN@github.com/rdurlo/CxCLIScript.git
       - run: ls -l
 
       
