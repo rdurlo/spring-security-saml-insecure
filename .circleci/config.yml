@@ -1,16 +1,14 @@
 version: 2.1
 
 jobs:
-  run-sast:
-    docker:
-      - image: cimg/base:stable
+   build:
+    machine:
+      image: ubuntu-2004:2022.10.1
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+      - run: https://rdurlo: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@github.com/rdurlo/CxCLIScript.git
+      - run: ls -l
 
-workflows:
-  say-hello-workflow:
-    jobs:
-      - run-sast
+      
+
+
